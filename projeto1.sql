@@ -4,9 +4,9 @@ USE Projeto1
 
 CREATE TABLE transacao (
 	id INT NOT NULL auto_increment,
-    tipo VARCHAR (10) not null,
-    nome VARCHAR (150) not null,
-    valor VARCHAR (15) not null,
+    tipo ENUM ("compra", "venda") not null,
+    nome VARCHAR (500) not null,
+    valor decimal (30,30) not null,
     data_de_cadastro DATE,
     primary key (id)
 )
